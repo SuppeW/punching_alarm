@@ -4,7 +4,7 @@ import random
 import RPi.GPIO as GPIO
 
 shock_pin = 17
-sounds = ["chickencoop.mp3","where is my team.mp3","whaaat.mp3"]
+sounds = ["chickencoop.mp3","where is my team.mp3","whaaat.mp3", "goindgtobed.mp3"]
 soundslen = len(sounds)
 from random import randint
 

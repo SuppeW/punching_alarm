@@ -14,15 +14,15 @@ GPIO.setup(shock_pin, GPIO.IN)
 pygame.mixer.init()
 def callback(shock_pin):
         if GPIO.input(shock_pin):
-            print "alarm time"
-            pygame.mixer.music.load(sounds[randint(0,soundslen-1)])
+            print ("alarm time")
+            pygame.mixer.music.load(sounds[randint(0,soundslen)])
             pygame.mixer.music.play()
             while pygame.mixer.music.get_busy() == True:
                 continue
 
 
         else:
-            print "alarm time"
+            print ("alarm time")
 
 GPIO.add_event_detect(shock_pin, GPIO.BOTH, bouncetime=5000)
 GPIO.add_event_callback(shock_pin, callback)
